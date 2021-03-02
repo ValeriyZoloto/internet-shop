@@ -1,0 +1,79 @@
+*,
+*::before,
+::after {
+	box-sizing: border-box;
+}
+
+/*
+font-family: 'Noto Sans', sans-serif;
+font-family: 'Playfair Display', serif;
+*/
+
+body {
+	margin: 0;
+	font-family: "Noto Sans", sans-serif;
+}
+img {
+	display: block;
+	max-width: 100%;
+}
+
+.container {
+	max-width: 1200px;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin: 0 auto; /* выравниваем по центру*/
+}
+.none {
+	display: none;
+}
+.section-button-wrapper {
+	text-align: center;
+}
+.section-featured {
+	padding-top: 30px;
+	padding-bottom: 35px;
+}
+
+/* для десктопа */
+@media (min-width: 992px) {
+	.section-featured {
+		padding-top: 60px;
+		padding-bottom: 70px;
+	}
+}
+.section-new {
+	padding-top: 30px;
+	padding-bottom: 35px;
+}
+
+/* для десктопа */
+@media (min-width: 992px) {
+	.section-new {
+		padding-top: 70px;
+		padding-bottom: 70px;
+	}
+}
+.section-blog {
+	padding-top: 35px;
+	padding-bottom: 25px;
+}
+
+/* для десктопа */
+@media (min-width: 992px) {
+	.section-blog {
+		padding-top: 70px;
+		padding-bottom: 45px;
+	}
+}
+.section-subscribe {
+	padding-top: 25px;
+	padding-bottom: 50px;
+}
+/* для десктопа */
+@media (min-width: 992px) {
+	.section-subscribe {
+		padding-top: 45px;
+		padding-bottom: 100px;
+	}
+}

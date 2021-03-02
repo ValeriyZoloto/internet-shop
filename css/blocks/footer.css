@@ -1,0 +1,87 @@
+.footer {
+	padding: 30px 0;
+	background: #000000;
+	color: #fff;
+}
+
+.footer a {
+	color: #fff;
+}
+
+.footer__column {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.footer__nav {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	margin-bottom: 25px;
+	font-size: 14px;
+	text-transform: uppercase;
+	color: #ffffff;
+}
+/* для десктопа */
+@media (min-width: 992px) {
+	.footer__nav {
+		flex-direction: row;
+		justify-content: center;
+	}
+}
+
+.footer__nav a {
+	text-decoration: none;
+	transition: opacity 0.2s ease-in; /*зомедляем до 0.2секунды hover*/
+}
+
+.footer__nav a:hover {
+	opacity: 0.8; /*меняем прозрачность по hover для ссылок*/
+}
+
+.footer__socials {
+	margin-bottom: 25px;
+	display: flex; /* выравниваем иконки*/
+	align-self: center;
+}
+
+.footer__nav > a + a {
+	margin-top: 20px;
+}
+
+/* для десктопа */
+@media (min-width: 992px) {
+	.footer__nav > a + a {
+        margin-top: 0;
+		margin-left: 30px;
+	}
+}
+
+.footer__socials-link {
+	text-decoration: none;
+}
+
+.footer__socials-link + .footer__socials-link {
+	margin-left: 30px;
+}
+
+.footer__socials-icon {
+	transition: fill 0.2s ease-in; /*замедляем эфект hover для заливки fill*/
+	fill: #fff;
+}
+
+.footer__socials-icon:hover {
+	fill: #f72464;
+}
+
+.footer__copiright {
+	font-size: 14px;
+	line-height: 19px;
+	text-align: center;
+	color: #999999;
+}
+.footer__copiright p {
+	margin: 0;
+}

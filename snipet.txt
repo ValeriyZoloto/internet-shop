@@ -1,0 +1,15 @@
+Работа с eCSStractor for VSCode
+2 Выделяем фрагмент html coda далее ctr + Shift + x и 
+3 скопированный код вставляем в css файл
+
+4 Шрифты
+
+иконки гамбургер 
+https://codepen.io/webcademy/pen/BaaNwJy
+
+закончил 3 видео 1 39 48
+
+/* для десктопа */
+@media (min-width: 992px){
+
+}

@@ -1,0 +1,94 @@
+.posts-wrapper {
+	margin-bottom: 35px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	row-gap: 40px; /*растояние между рядами */
+	column-gap: 30px; /*растояние между колонками  */
+}
+
+/* для десктопа */
+@media (min-width: 992px) {
+	.posts-wrapper {
+		justify-content: space-between;
+		margin-bottom: 75px;
+	}
+}
+.post {
+	max-width: 570px;
+	display: flex; /*выравниваем контент внутри post в ряд*/
+	justify-content: space-between;
+	flex-grow: 1; /*сво-во определяет жадность элемента*/
+	align-items: flex-start;
+	column-gap: 15px; /*растояние между колонками  */
+}
+
+@media (min-width: 400px){
+    .post{
+        column-gap: 30px;
+    }
+}
+.post__img {
+    max-width: 100px;
+}
+
+@media (min-width: 400px) {
+	.post__img {
+        max-width: 170px;
+	}
+}
+
+.post__content {
+	max-width: 370px;
+	display: flex;
+	flex-direction: column; /*распологаем эл-ты в колонку*/
+	justify-content: center; /*разм эл-ты по центру*/
+}
+
+.post__title {
+	margin: 0;
+	margin-bottom: 10px;
+	font-family: "Playfair Display", serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: #000000;
+}
+.post__text {
+	margin: 0;
+	margin-bottom: 10px;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 1.3;
+	color: #777777;
+}
+.post__read-more {
+	font-family: "Playfair Display", serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	color: #000000;
+	text-decoration: none;
+}
+.post__read-more::after {
+	content: ""; /*для отображения псевдоэлемента*/
+	display: inline-block; /*для того чтобы псевдоэл встал в один ряд с кнопкой*/
+	margin-left: 2px;
+	width: 24px;
+	height: 24px;
+	vertical-align: middle; /*позиционируем псевдоэлемент поседедине*/
+
+	background-image: url(../../img/icons/chevron-right.svg);
+	background-position: center;
+	background-size: auto;
+	background-repeat: no-repeat;
+
+	transition: margin 0.2s ease-in;
+}
+.post__read-more:hover {
+	text-decoration: underline;
+}
+.post__read-more:hover::after {
+	margin-left: 10px; /*иконка сдвигается вправо при наведении */
+}

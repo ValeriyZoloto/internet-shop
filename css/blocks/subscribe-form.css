@@ -1,0 +1,80 @@
+.subscribe-form {
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+}
+/* для планшета и более */
+@media (min-width: 540px) {
+	.subscribe-form {
+		display: flex;
+		justify-content: center; /*выравниваем форму по центру*/
+		flex-direction: row;
+	}
+}
+/*
+Внутри subscribe-form мы обращаемся к любому эл-ту и обращаемся к его 
+соседу справа и говорим margin-left: 10px плюс этого подхода теперь сюда
+можно добавлять что угодно и к доб. элементу будет добавлятся отступ
+*/
+
+.subscribe-form > * + * {
+	margin-top: 10px;
+}
+/* для планшета и более */
+@media (min-width: 540px) {
+	.subscribe-form > * + * {
+        margin-top: 0;
+		margin-left: 10px;
+	}
+}
+
+.subscribe-form__input {
+	padding-left: 10px;
+	padding-right: 10px;
+	height: 42px;
+	background: #ffffff;
+	border: 1px solid #f72464;
+	border-radius: 4px;
+
+	font-family: "Noto Sans", sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 1;
+	color: #000;
+}
+/* для планшета и более */
+@media (min-width: 540px) {
+	.subscribe-form__input {
+		width: 230px;
+	}
+}
+
+.subscribe-form__input::placeholder {
+	color: #999999;
+}
+.subscribe-form__button {
+	font-family: "Noto Sans", sans-serif;
+	display: inline-block;
+	padding: 13px 30px;
+	background: #f72464;
+	border: none;
+	border-radius: 4px;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 1;
+	color: #ffffff;
+	cursor: pointer;
+	transition: box-shadow 0.2s ease-in, background-color 0.2s ease-in;
+}
+/* для планшета и более */
+@media (min-width: 540px) {
+	.subscribe-form__button {
+		width: 230px;
+	}
+}
+.subscribe-form__button:hover {
+	box-shadow: 0px 2px 15px rgba(184, 13, 64, 0.671);
+	background-color: #ff3874;
+}
